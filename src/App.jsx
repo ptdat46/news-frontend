@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-axios.defaults.baseURL = process.env.REACT_APP_API_URL;
+axios.defaults.baseURL = process.env.VITE_API_URL;
 
 function App() {
   const [articles, setArticles] = useState([]);
@@ -18,8 +18,8 @@ function App() {
     <div>
       <h1>Tin Nóng Hôm Nay 🔥</h1>
       <ul>
-        {articles.map((a, i) => (
-          <li key={i}>{a.title}</li>
+        {articles.map((a) => (
+          <li key={a.url}>{a.title}</li>
         ))}
       </ul>
     </div>

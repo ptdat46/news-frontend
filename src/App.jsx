@@ -7,7 +7,7 @@ function App() {
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
-    axios.get('/newsapi/v2/top-headlines?country=us&apiKey=0bdbc07dee6f44179109de04121e1d63')
+    axios.get('/api/news')
       .then(res => setArticles(res.data.articles))
       .catch(err => console.error(err));
   }, []);

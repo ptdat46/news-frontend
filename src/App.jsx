@@ -19,11 +19,6 @@ function App() {
   return (
     <div>
       <h1>Tin Nóng Hôm Nay 🔥</h1>
-      <ul>
-        {articles.map((a) => (
-          <li key={a.url}>{a.title}</li>
-        ))}
-      </ul>
     </div>
   );
 }
